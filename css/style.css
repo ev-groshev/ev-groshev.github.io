@@ -464,11 +464,6 @@ input:focus {
 
 .footer-top .custom-checkbox {
   position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-
-.footer-top .custom-checkbox + label {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -480,6 +475,14 @@ input:focus {
       -ms-user-select: none;
           user-select: none;
   font-size: 14px;
+}
+
+.footer-top .custom-checkbox:hover {
+  background-color: #67aabe;
+}
+
+.footer-top .custom-checkbox:active {
+  background-color: #5d9db1;
 }
 
 .footer-top .custom-checkbox + label::before {
@@ -515,6 +518,46 @@ input:focus {
   height: 114px;
 }
 
+#button {
+  display: inline-block;
+  background-color: #6ebbd3;
+  width: 59px;
+  height: 59px;
+  text-align: center;
+  border-radius: 4px;
+  margin: 30px;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  z-index: 1000;
+}
+
+#button .box {
+  width: 59px;
+  height: 59px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#button:hover {
+  cursor: pointer;
+  background-color: #67aabe;
+}
+
+#button:active {
+  background-color: #5d9db1;
+}
+
 @media (min-width: 1180px) {
   .menu {
     display: -webkit-box;
@@ -535,6 +578,8 @@ input:focus {
     right: 0;
     top: 100px;
     z-index: 1;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
 
   .menu .menu-list {
@@ -606,6 +651,10 @@ input:focus {
     display: block;
     width: 100%;
   }
+
+  #button {
+    display: none;
+  }
 }
 
 @media (max-width: 767px) and (min-width: 320px) {
@@ -620,6 +669,8 @@ input:focus {
     right: 0;
     top: 100px;
     z-index: 1;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
 
   .menu .menu-list {
@@ -726,5 +777,9 @@ input:focus {
   .footer-top__btn {
     width: 100%;
     display: block;
+  }
+
+  #button {
+    display: none;
   }
 }
