@@ -475,6 +475,7 @@ input:focus {
       -ms-user-select: none;
           user-select: none;
   font-size: 14px;
+  opacity: 0;
 }
 
 .footer-top .custom-checkbox:hover {
@@ -509,7 +510,7 @@ input:focus {
 }
 
 .footer-top .custom-checkbox:checked + label::before {
-  border-color: #0b76ef;
+  border-color: #6ebbd3;
   background-color: #6ebbd3;
   background-image: url("../images/check-mark.svg");
 }
